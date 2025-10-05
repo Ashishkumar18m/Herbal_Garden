@@ -1,0 +1,457 @@
+* {
+    margin: 0px;
+    margin-top: 0px;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+
+
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0px;
+
+    background-color: rgb(255, 255, 255);
+
+    width: 100%;
+}
+
+/* ============================= Header Start =================== */
+.header {
+    background-color: #000;
+
+    /*background-position: center; */
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    color: white;
+    position: fixed;
+
+
+
+}
+
+header h1 {
+    margin: 20px;
+    color: #00a8fd;
+}
+
+.header button {
+    margin: 20px;
+    padding: 3px;
+    background: #001dd7;
+    color: #fbfcfd;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px rgb(0, 0, 0);
+    border: 1px solid #001dd7;
+
+
+
+}
+
+.header .ba1 h1 {
+    margin-top: 10px;
+    font-size: 40px;
+    background: linear-gradient(90deg, #7CFC00, #32CD32, #228B22, #006400);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header .contact  {
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+
+
+}
+
+.header button:hover {
+    background: #2a8bed;
+    box-shadow: 1px 3px 5px rgb(0, 42, 255);
+    border: 1px solid #2a8bed;
+}
+
+/* ================================ Header End =================== */
+
+/* =============================== Home Page Start =================== */
+.bar1 {
+    scroll-margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.home {
+
+    width: 100%;
+    height: 100vh;
+    margin-top: 0px;
+    background-image: url(https://t3.ftcdn.net/jpg/15/59/15/52/240_F_1559155237_X2a9PWTLlgjOG0FkcL0R6YufnitaRYae.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*background-position: center; */
+}
+
+.st {
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+
+}
+
+.bar1 h1 {
+    font-size: 100px;
+    background: linear-gradient(90deg, #7CFC00, #32CD32, #228B22, #006400);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*==========================outer box 1 =====================================*/
+.O1 {
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+
+
+
+}
+
+.Obox {
+
+    border-radius: 30px;
+    width: 1400px;
+    min-height: 300px;
+    box-sizing: border-box;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px rgb(38, 0, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+
+}
+
+/*==================================inner box 1 =============================*/
+.ibox1 {
+    border-radius: 30px;
+    max-width: 400px;
+    min-height: 250px;
+    text-align: center;
+    /* margin: 25px;
+    
+    
+    margin-right: 0px;
+    box-sizing: border-box;
+    position: absolute; */
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+
+#Tulsi {
+    scroll-margin-top: 100px;
+}
+
+.ibox1 h3 {
+    font-size: 50px;
+
+
+
+}
+
+.info {
+    margin-left: 10px;
+    text-align: start;
+    gap: 20px;
+}
+
+.para {
+    display: flex;
+    align-content: start;
+    gap: 5px;
+    line-height: 25px;
+}
+
+.para pre {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: -5px;
+
+}
+
+/*=================================inner box 2 ================================*/
+.ibox2 {
+    border-radius: 30px;
+    max-width: 400px;
+    min-height: 250px;
+    /* margin: 25px;
+    
+    
+    margin-left: 300px;
+    box-sizing: border-box;
+    position: absolute; */
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+
+.imgs2 {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.img2 img {
+    width: 160px;
+    height: 135px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.img3 img {
+    width: 160px;
+    height: 135px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #33392d;
+    margin-top: -90px;
+    margin-bottom: 10px;
+
+
+
+}
+
+.icons span {
+    padding: 10px 15px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    background: #64ba33df;
+
+
+}
+
+/*============================inner box 3=====================*/
+
+.ibox3 img {
+    max-width: 500px;
+
+    height: 250px;
+
+
+
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#Ashwagandha {
+    scroll-margin-top: 100px;
+}
+
+#Turmeric {
+    scroll-margin-top: 100px;
+}
+
+#AloeVera {
+    scroll-margin-top: 100px;
+}
+
+#Neem {
+    scroll-margin-top: 100px;
+}
+
+#Clove {
+    scroll-margin-top: 100px;
+}
+
+#Cardamom {
+    scroll-margin-top: 100px;
+}
+
+
+/* ============================== Home Page End =================== */
+
+
+
+
+/* ============================== Footer Start =================== */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 110px;
+    text-align: center;
+    background-color: rgb(52, 50, 50);
+    box-shadow: 0px 0px 10000px rgb(0, 0, 255);
+
+}
+
+footer p {
+    padding-top: 10px;
+    color: #f4f4f9;
+
+}
+
+.social-media {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    /* border:2px solid rgb(0, 0, 0); */
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+
+    width: fit-content;
+    height: 60px;
+    /* margin-top: 20px; */
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.con {
+    color: white;
+    transition: 0.3s;
+}
+
+.con1 {}
+
+#con1:hover {
+    height: 29px;
+    border-radius: 10px;
+    color: #000;
+    transform: translateY(-5px)scale(1.2);
+    background: white;
+}
+
+#con4:hover {
+    height: 30px;
+    border-radius: 10px;
+    transform: translateY(-5px)scale(1.2);
+    background: linear-gradient(135deg, #005eff, #fb3d3d, #ffe675, #fff678, #ff50f6, #f76060);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#con2:hover {
+    transform: translateY(-5px)scale(1.2);
+    color: #286fea;
+}
+
+#con3:hover {
+    height: 29px;
+    border-radius: 15px;
+    color: #000;
+    transform: translateY(-5px)scale(1.2);
+
+}
+
+/* ============================== Footer End ===================== */
+
+
+
+
+@media(max-width:1000px) {
+    .ibox1 {
+        order: 1;
+        margin-top: 20px;
+        max-width: 400px;
+        margin: 20px;
+    }
+
+    .ibox2 {
+        order: 2;
+        max-width: 300px;
+    }
+
+    .imgs2 {
+        max-width: 370px;
+    }
+
+    .img2 img {
+        max-width: 125px;
+        max-height: 125px;
+    }
+
+    .img3 img {
+        max-width: 125px;
+        max-height: 125px;
+    }
+
+    .infoimg2 {
+        margin-top: -105px;
+        text-align: center;
+        /* margin-left: 20px; */
+    }
+
+
+    .ibox3 {
+        order: 3;
+        margin-bottom: 20px;
+        margin: 20px;
+
+
+    }
+
+    .ibox3 img {
+        max-width: 300px;
+        margin-left: -7.5px;
+    }
+
+    .Obox {
+
+
+        margin: 18px;
+
+        width: 325px;
+
+    }
+}
