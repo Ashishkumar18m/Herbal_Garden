@@ -40,8 +40,9 @@
         </div>
 
       </div>
+      
       <div>
-      <div>
+        <div>
        
           <div>
             <a class="cartm" href="#cartTab">
@@ -57,10 +58,11 @@
           </div>
           
           </div>
-      <div>
+          <div class="contactm">
         <a href="#Contact"><button class="contact">Contact</button></a>
-
-      </div>
+          </div>
+        </div>
+        
       </div>
     </div>
     
@@ -179,127 +181,42 @@
 
           <div>
             <label for="plantSelect">Plant name:</label>
+            <input type="text" placeholder="Search Plants..." list="plant">
+            <datalist id="plant">
+              <option id="Tulsi">Tulsi</option>
+              <option >Neem</option>
+              <option >Basil</option>
+              <option >Aloe Vera</option>
+              <option >Lavender</option>
+            </datalist>
 
-            <select id="plantSelect" onchange="navigateToPlant()">
-              <option value="">-- Select a Plant --</option>
-              <option value="#Tulsi">Tulsi</option>
-              <option value="#Neem">Neem</option>
-              <option value="#Basil">Basil</option>
-              <option value="#Aloe">Aloe Vera</option>
-              <option value="#Lavender">Lavender</option>
-
-            </select>
+            
           </div>
         </div>
       </div>
 
       <!-- ================================================================== Boxes ========             -->
-      <div class="plant">
-<a href="index3.html#Tulsi">
-        <div class="Tulsi">
-          <img
-            src="https://static.tnn.in/thumb/msid-97568598,thumbsize-124936,width-1280,height-720,resizemode-75/97568598.jpg"
-            alt="">
-          <div>
-            <h4>Tulsi</h4>
-
-          </div>
-          <div class="icons">
-            <span class="property"><i class="fas fa-shield-virus"></i> Immune Booster</span>
-            <span class="property"><i class="fas fa-lungs"></i> Respiratory Health</span>
-            <span class="property"><i class="fas fa-brain"></i> Stress Relief</span>
-            <span class="property"><i class="fas fa-bacteria"></i> Antibacterial</span>
-
-          </div>
-        </div></a>
-        <a href="index3.html#Ashwagandha">
-        <div class="Tulsi" id="Ashwagandha">
-          <img src="https://aussiegreenthumb.com/wp-content/uploads/2022/12/What-is-Ashwagandha.jpg" alt="">
-          <div>
-            <h4>Ashwagandha</h4>
-
-          </div>
-          <div class="icons">
-            <span class="property"><i class="fas fa-brain"></i> Stress Relief</span>
-            <span class="property"><i class="fas fa-bed"></i> Sleep Aid</span>
-            <span class="property"><i class="fas fa-energy"></i> Energy Booster</span>
-            <span class="property"><i class="fas fa-memory"></i> Cognitive Function</span>
-
-          </div>
-        </div></a>
-        <a href="index3.html#Turmeric">
-        <div class="Tulsi" id="Turmeric">
-          <img src="https://thafd.bing.com/th/id/OIP.sizCpPqnIOesAxX6Dl7LHgHaEG?w=285&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-            alt="">
-          <div>
-            <h4>Turmeric</h4>
-
-          </div>
-          <div class="icons">
-            <span class="property"><i class="fas fa-fire"></i> Anti-inflammatory</span>
-            <span class="property"><i class="fas fa-joint"></i> Arthritis Relief</span>
-            <span class="property"><i class="fas fa-heart"></i> Antioxidant</span>
-            <span class="property"><i class="fas fa-brain"></i> Brain Health</span>
-
-
-
-          </div>
-        </div></a>
-        <a href="index3.html#AloeVera">
-        <div class="Tulsi" id="AloeVera">
-          <img src="https://thafd.bing.com/th/id/OIP.lwWEMHGUg26UBnLz44nRFwHaE8?w=283&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-            alt="">
-          <div>
-            <h4>AloeVera</h4>
-
-          </div>
-          <div class="icons">
-            <span class="property"><i class="fas fa-burn"></i> Burn Relief</span>
-            <span class="property"><i class="fas fa-hand-holding-heart"></i> Skin Hydration</span>
-            <span class="property"><i class="fas fa-first-aid"></i> Wound Healing</span>
-            <span class="property"><i class="fas fa-pills"></i> Nutrient Rich</span>
-
-          </div>
-        </div></a>
-        <a href="index3.html#Neem">
-        <div class="Tulsi" id="Neem">
-          <img
-            src="https://thafd.bing.com/th/id/OIP.obxGbOVgD-NWDDXADi9apwHaE4?w=280&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
-            alt="">
-          <div>
-            <h4>Neem</h4>
-
-          </div>
-          <div class="icons">
-            <span class="property"><i class="fas fa-teeth"></i> Dental Health</span>
-            <span class="property"><i class="fas fa-skull"></i> Natural Pesticide</span>
-            <span class="property"><i class="fas fa-allergies"></i> Skin Health</span>
-            <span class="property"><i class="fas fa-virus"></i> Antiviral</span>
-
-          </div>
-        </div></a>
-         <a href="index3.html#Clove">
-        <div class="Tulsi" id="Clove">
-          <img
-            src="https://plantura.garden/uk/wp-content/uploads/sites/2/2022/08/flowering-clove-tree.jpeg?x96810"
-            alt="">
-          <div>
-            <h4>Clove</h4>
-
-          </div>
-          <div class="icons">
-           <span class="property"><i class="fas fa-brain"></i> Cognitive Function</span>
-    <span class="property"><i class="fas fa-bed"></i> Sleep Aid</span>
-    <span class="property"><i class="fas fa-bolt"></i> Energy Booster</span>
-    <span class="property"><i class="fas fa-spa"></i> Stress Relief</span>
-          </div>
-        </div></a>
+      <div class="plant js-product-grid">
+ 
+       
+        
+        </div>
         
 
       </div>
 
 
-
+  </div>
+   <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
       
       <div class="gm" id="Map">
         <h1>Explore Garden on the Map</h1>
@@ -450,14 +367,10 @@
 
 
 
-      <!-- ==========================================unknown script ================================== -->
+      <!-- ==========================================script ================================== -->
 
 
-
-
-
-
-
+<script  src="app.js"></script>
 
 </body>
 
