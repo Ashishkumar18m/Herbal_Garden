@@ -1,4 +1,5 @@
-// ==================== ELEMENT SELECTION ====================
+
+
 let listProductHTML = document.querySelector('.js-product-grid'); // Product grid
 let listCartHTML = document.querySelector('.listCart'); // Cart items container
 let iconCart = document.querySelector('.cart'); // Cart icon container
@@ -23,12 +24,17 @@ const addDataToHTML = () => {
     if (products.length > 0) {
         products.forEach(product => {
             let newProduct = document.createElement('div');
-            newProduct.dataset.id = product.id;
+            // use product._id if present for unique dataset id fallback to product.id
+            const dataId = product._id || product.id;
+            newProduct.dataset.id = dataId;
             newProduct.classList.add('item');
+
+            // Use name without spaces for index3 linking
+            const nameHash = product.name ? product.name.replace(/\s+/g, '') : '';
 
             newProduct.innerHTML = `
                 <div class="Tulsi">
-                    <a href="index3.html#${product.name.replace(/\s+/g, '')}">
+                    <a href="index3.html#${nameHash}">
                         <img src="${product.image}" alt="${product.name}">
                     </a>
 
@@ -42,16 +48,16 @@ const addDataToHTML = () => {
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <span class="rating-value">${product.rating.stars} (${product.rating.review})</span>
+                            <span class="rating-value">${product.rating?.stars ?? ''} (${product.rating?.review ?? 0})</span>
                         </div>
-                        <p class="product-description">${product.description}</p>
+                        <p class="product-description">${product.description ?? ''}</p>
 
                         <div class="product-footer">
                             <div class="product-price">
-                                $${(product.price).toFixed(2)} <span>$${(product.previous_price).toFixed(2)}</span>
+                                $${Number(product.price).toFixed(2)} <span>$${Number(product.previous_price ?? product.price).toFixed(2)}</span>
                             </div>
                             <div>
-                                <button class="add-to-cart js-add-to-cart" data-product-id="${product.id}">
+                                <button class="add-to-cart js-add-to-cart" data-product-id="${dataId}">
                                     <i class="fas fa-shopping-cart"></i> Add to Cart
                                 </button>
                             </div>
@@ -69,7 +75,6 @@ const addDataToHTML = () => {
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
 
-    // Match both button and icon clicks
     if (positionClick.classList.contains('js-add-to-cart') ||
         positionClick.closest('.js-add-to-cart')) {
 
@@ -111,11 +116,15 @@ const addCartToHTML = () => {
 
     if (cart.length > 0) {
         cart.forEach(item => {
-            let positionProduct = products.findIndex((value) => value.id == item.product_id);
+            // find by _id or numeric id
+            let positionProduct = products.findIndex((value) => {
+                const dataId = value._id ? String(value._id) : String(value.id);
+                return dataId == item.product_id;
+            });
             let info = products[positionProduct];
 
             totalQuantity += item.quantity;
-            totalAmount += info.price * item.quantity;
+            totalAmount += Number(info.price) * item.quantity;
 
             let newItem = document.createElement('div');
             newItem.classList.add('item');
@@ -180,9 +189,9 @@ const changeQuantityCart = (product_id, type) => {
     addCartToMemory();
 };
 
-// ==================== INITIALIZE APP ====================
+// ==================== INITIALIZE APP (fetch from backend) ====================
 const initApp = () => {
-    fetch('products.json')
+    fetch('/api/products')
         .then(response => response.json())
         .then(data => {
             products = data;
@@ -193,6 +202,20 @@ const initApp = () => {
                 cart = JSON.parse(localStorage.getItem('cart'));
                 addCartToHTML();
             }
+        })
+        .catch(err => {
+            console.error('Failed to load products from API, falling back to local products.json', err);
+            // fallback to local products.json if needed
+            fetch('products.json')
+                .then(r => r.json())
+                .then(d => {
+                    products = d;
+                    addDataToHTML();
+                    if (localStorage.getItem('cart')) {
+                        cart = JSON.parse(localStorage.getItem('cart'));
+                        addCartToHTML();
+                    }
+                });
         });
 };
 
