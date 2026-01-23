@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <option value="cod">Cash on Delivery</option>
               <option value="online">Online Payment</option>
             </select>
-            
+            <h2 style="margin-top: 0; color: red">This website is intended for educational purposes only.</h2>
             <div style="display: flex; gap: 10px; margin-top: 20px;">
               <button type="button" onclick="closeCheckoutModal()" style="flex: 1; padding: 10px; background: #ccc;">Cancel</button>
               <button type="submit" style="flex: 1; padding: 10px; background: #4CAF50; color: white;">Place Order</button>

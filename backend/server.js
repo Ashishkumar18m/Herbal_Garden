@@ -66,7 +66,7 @@ async function seedProducts() {
           id: 1,
           name: "Tulsi",
           scientificName: "Ocimum sanctum",
-          description: "Holy Basil, known for its spiritual significance and medicinal properties.",
+          description: "Holy Basil: spiritually and medicinally revered.",
           medicinalUses: "Anti-inflammatory, anti-viral, antioxidant properties. Boosts immunity, relieves stress.",
           habitat: "Native to India, commonly found in gardens and tropical regions.",
           cultivation: "Prefers warm climates, well-drained soil, and regular watering.",
